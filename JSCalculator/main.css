@@ -1,0 +1,90 @@
+/* Set box-sizing to border-box to include padding and border in the element's total width. */
+/* Use Gotham Rounded or sans-serif as the font family. */
+/* Set normal font weight. */
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+/* Reset padding and margin on the body element to avoid unwanted spacing. */
+/* Apply a linear gradient background from left (#00AAFF) to right (#00FF6C). */
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #00AAFF, #00FF6C);
+}
+
+/* Create a calculator-grid with CSS grid layout. */
+/* Align and justify the grid content to the center. */
+/* Set a minimum height of 100vh to fill the viewport. */
+/* Define the grid columns with four columns of 100px each. */
+/* Set the grid rows with a minimum height of 120px for the first row and five rows of 100px each. */
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+/* Style the buttons within the calculator grid. */
+/* Use a pointer cursor to indicate interactivity. */
+/* Set the font size to 2rem. */
+/* Add a white border of 1px around the buttons. */
+/* Remove the outline when the button is focused (for accessibility). */
+/* Apply a semi-transparent white background to the buttons. */
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, .75);
+}
+
+/* When hovering over the buttons, increase the background opacity to make them more visible. */
+.calculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, .9);
+}
+
+/* Define a CSS class "span-two" to span two columns in the grid layout. */
+/* This class can be applied to elements that should occupy two columns. */
+.span-two {
+  grid-column: span 2;
+}
+
+/* Style the output section of the calculator. */
+/* It spans across all columns of the grid. */
+/* Set a semi-transparent black background. */
+/* Align the content to the center vertically using flexbox. */
+/* Add space around the elements and stack them vertically. */
+/* Allow words to wrap if they exceed the container's width. */
+/* Break words to avoid overflow issues. */
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, .75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/* Style the previous operand element within the output section. */
+/* Set the text color to semi-transparent white. */
+/* Set the font size to 1.5rem. */
+.output .previous-operand {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
+}
+
+/* Style the current operand element within the output section. */
+/* Set the text color to white. */
+/* Set the font size to 2.5rem. */
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
