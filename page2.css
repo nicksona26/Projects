@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.back-button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.file-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#fileInput {
+    display: none;
+    margin: 0 auto; 
+}
+
+.file {
+    width: calc(50% - 20px);
+    background-color: #59b7f6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.file input[type="text"] {
+    flex-grow: 1;
+    padding: 5px;
+}
+
+.delete-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    margin-left: 5px; 
+}
+
+#createFileBtn {
+    display: block;
+    margin: 10px auto;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+#folderName {
+    text-align: center;
+}
